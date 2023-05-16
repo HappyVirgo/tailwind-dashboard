@@ -1,264 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="This is a sample project based on TailwindCSS.">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
-  </head>
 
-  <body class="text-base min-h-screen text-white flex flex-col">
-    <div class="w-full fixed top-0 bg-gray-800 p-1 flex items-center lg:hidden">
-      <svg width="48" height="48" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.25 8.75L9.75 12L13.25 15.25"></path>
-      </svg>
-      <span class="text-xl -mt-1">Dashboard</span>
+<head>
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="This is a sample project based on TailwindCSS.">
+  <link href="
+https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-beta1/dist/css/index.min.css
+" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+</head>
+
+<body class="text-base min-h-screen text-white flex flex-col">
+  <div class="w-full fixed top-0 bg-gray-800 p-1 flex items-center lg:hidden">
+    <svg width="48" height="48" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+        d="M13.25 8.75L9.75 12L13.25 15.25"></path>
+    </svg>
+    <span class="text-xl -mt-1">Dashboard</span>
+  </div>
+  <div class="flex-1 bg-gray-900 w-100 px-2 pt-16 lg:pt-6 lg:flex lg:space-x-6">
+    <div class="hidden lg:fixed lg:flex lg:left-2 lg:w-2/12 lg:flex-col lg:space-y-3">
+      <div class="bg-gray-800 w-full px-4 py-3 rounded-lg"><span
+          class="pl-4 border-l border-red-600 pb-1">Dashboard</span></div>
+      <div class="bg-gray-800 w-full rounded-lg" id="profile">
+        <label class="flex justify-between items-center w-full px-4 py-3" type="button" data-te-collapse-init
+          data-te-target="#profile-settings" aria-expanded="false" aria-controls="profile-settings">
+          <span>Profile settings</span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </label>
+        <ul id="profile-settings" data-te-collapse-item aria-labelledby="profile" data-te-parent="#profile"
+          class="!visible hidden w-full px-4 pb-3">
+          <li class="w-full"><a href="#">Lorem Ipsum</a></li>
+          <li class="w-full"><a href="#">Lorem Ipsum</a></li>
+          <li class="w-full"><a href="#">Lorem Ipsum</a></li>
+        </ul>
+      </div>
+      <div class="bg-gray-800 w-full rounded-lg" id="account">
+        <label class="flex justify-between items-center w-full px-4 py-3" type="button" data-te-collapse-init
+          data-te-target="#account-settings" aria-expanded="false" aria-controls="account-settings">
+          <span>Account settings</span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </label>
+        <ul id="account-settings" data-te-collapse-item aria-labelledby="account" data-te-parent="#account"
+          class="!visible hidden w-full px-4 pb-3">
+          <li class="w-full"><a href="#">Lorem Ipsum</a></li>
+          <li class="w-full"><a href="#">Lorem Ipsum</a></li>
+          <li class="w-full"><a href="#">Lorem Ipsum</a></li>
+        </ul>
+      </div>
+      <div class="bg-gray-800 w-full px-4 py-3 rounded-lg flex flex-col space-y-3">
+        <a href="#" class="no-underline">Notification Center</a>
+        <a href="#" class="no-underline">Submitted Review</a>
+        <a href="#" class="no-underline">Private Gallery Requests</a>
+        <a href="#" class="no-underline">Visits</a>
+        <a href="#" class="no-underline">Favorite Videos</a>
+        <a href="#" class="no-underline">My Buddies</a>
+        <a href="#" class="no-underline">Blocked</a>
+      </div>
     </div>
-    <div class="flex-1 bg-gray-900 w-100 px-2 pt-16 lg:pt-6 lg:flex lg:space-x-6">
-      <div class="hidden lg:fixed lg:flex lg:left-2 lg:w-2/12 lg:flex-col lg:space-y-3">
-        <div class="bg-gray-800 w-full px-4 py-3 rounded-lg"><span class="pl-4 border-l border-red-600 pb-1">Dashboard</span></div>
-        <div class="bg-gray-800 w-full rounded-lg" id="profile">
-          <label 
-            class="flex justify-between items-center w-full px-4 py-3"
-            type="button"
-            data-te-collapse-init
-            data-te-target="#profile-settings"
-            aria-expanded="false"
-            aria-controls="profile-settings"
-          >
-            <span>Profile settings</span>
-            <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </label>
-          <ul
-            id="profile-settings"
-            data-te-collapse-item
-            aria-labelledby="profile"
-            data-te-parent="#profile"
-            class="!visible hidden w-full px-4 pb-3">
-            <li class="w-full"><a href="#">Lorem Ipsum</a></li>  
-            <li class="w-full"><a href="#">Lorem Ipsum</a></li>  
-            <li class="w-full"><a href="#">Lorem Ipsum</a></li>  
-          </ul>
+    <div class="hidden lg:w-2/12 lg:block"></div>
+    <div class="w-full pt-3 flex flex-col space-y-3 mb-16 lg:pt-0 lg:mb-0 lg:w-7/12">
+      <div class="flex space-x-3 w-full">
+        <div class="px-3 py-2 w-2/3 items-center bg-gray-800 rounded-lg flex-grow flex">
+          <svg width="48" height="48" fill="red" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M18.25 11C18.25 15 12 19.25 12 19.25C12 19.25 5.75 15 5.75 11C5.75 7.5 8.68629 4.75 12 4.75C15.3137 4.75 18.25 7.5 18.25 11Z">
+            </path>
+            <circle cx="12" cy="11" r="2.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="1.5"></circle>
+          </svg>
+          <div class="flex flex-col">
+            <span class="text-gray-400">My Location</span>
+            <span>Great Meols, United Kingdom</span>
+          </div>
         </div>
-        <div class="bg-gray-800 w-full rounded-lg" id="account">
-          <label 
-            class="flex justify-between items-center w-full px-4 py-3"
-            type="button"
-            data-te-collapse-init
-            data-te-target="#account-settings"
-            aria-expanded="false"
-            aria-controls="account-settings"
-          >
-            <span>Account settings</span>
-            <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </label>
-          <ul
-            id="account-settings"
-            data-te-collapse-item
-            aria-labelledby="account"
-            data-te-parent="#account"
-            class="!visible hidden w-full px-4 pb-3">
-            <li class="w-full"><a href="#">Lorem Ipsum</a></li>  
-            <li class="w-full"><a href="#">Lorem Ipsum</a></li>  
-            <li class="w-full"><a href="#">Lorem Ipsum</a></li>  
-          </ul>
-        </div>
-        <div class="bg-gray-800 w-full px-4 py-3 rounded-lg flex flex-col space-y-3">
-          <a href="#" class="no-underline">Notification Center</a>
-          <a href="#" class="no-underline">Submitted Review</a>
-          <a href="#" class="no-underline">Private Gallery Requests</a>
-          <a href="#" class="no-underline">Visits</a>
-          <a href="#" class="no-underline">Favorite Videos</a>
-          <a href="#" class="no-underline">My Buddies</a>
-          <a href="#" class="no-underline">Blocked</a>
+        <div class="w-1/3 flex flex-col px-3 py-2 bg-gray-800 rounded-lg justify-center items-center">
+          <svg width="36" height="36" fill="white" viewBox="0 0 24 24">
+            <path stroke="transparent" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M12 18.25C15.5 18.25 19.25 16.5 19.25 12C19.25 7.5 15.5 5.75 12 5.75C8.5 5.75 4.75 7.5 4.75 12C4.75 13.0298 4.94639 13.9156 5.29123 14.6693C5.50618 15.1392 5.62675 15.6573 5.53154 16.1651L5.26934 17.5635C5.13974 18.2547 5.74527 18.8603 6.43651 18.7307L9.64388 18.1293C9.896 18.082 10.1545 18.0861 10.4078 18.1263C10.935 18.2099 11.4704 18.25 12 18.25Z">
+            </path>
+            <path stroke="gray" stroke-linecap="round" stroke-linejoin="round"
+              d="M9.5 12C9.5 12.2761 9.27614 12.5 9 12.5C8.72386 12.5 8.5 12.2761 8.5 12C8.5 11.7239 8.72386 11.5 9 11.5C9.27614 11.5 9.5 11.7239 9.5 12Z">
+            </path>
+            <path stroke="gray" stroke-linecap="round" stroke-linejoin="round"
+              d="M12.5 12C12.5 12.2761 12.2761 12.5 12 12.5C11.7239 12.5 11.5 12.2761 11.5 12C11.5 11.7239 11.7239 11.5 12 11.5C12.2761 11.5 12.5 11.7239 12.5 12Z">
+            </path>
+            <path stroke="gray" stroke-linecap="round" stroke-linejoin="round"
+              d="M15.5 12C15.5 12.2761 15.2761 12.5 15 12.5C14.7239 12.5 14.5 12.2761 14.5 12C14.5 11.7239 14.7239 11.5 15 11.5C15.2761 11.5 15.5 11.7239 15.5 12Z">
+            </path>
+          </svg>
+          <span>Messenger</span>
         </div>
       </div>
-      <div class="hidden lg:w-2/12 lg:block"></div>
-      <div class="w-full pt-3 flex flex-col space-y-3 mb-16 lg:pt-0 lg:mb-0 lg:w-7/12">
-        <div class="flex space-x-3 w-full">
-          <div class="px-3 py-2 w-2/3 items-center bg-gray-800 rounded-lg flex-grow flex">
-            <svg width="48" height="48" fill="red" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.25 11C18.25 15 12 19.25 12 19.25C12 19.25 5.75 15 5.75 11C5.75 7.5 8.68629 4.75 12 4.75C15.3137 4.75 18.25 7.5 18.25 11Z"></path>
-              <circle cx="12" cy="11" r="2.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
+      <div class="flex space-x-3 w-full">
+        <div class="w-2/3 items-center rounded-lg flex-grow flex space-x-3">
+          <div class="w-1/2 flex flex-col px-3 py-2 bg-gray-800 rounded-lg justify-center items-center">
+            <svg width="36" height="36" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z">
+              </path>
             </svg>
-            <div class="flex flex-col">
-              <span class="text-gray-400">My Location</span>
-              <span>Great Meols, United Kingdom</span>
-            </div>
+            <span class="text-center">Search Profiles</span>
           </div>
-          <div class="w-1/3 flex flex-col px-3 py-2 bg-gray-800 rounded-lg justify-center items-center">
+          <div class="w-1/2 flex flex-col px-3 py-2 bg-gray-800 rounded-lg justify-center items-center h-full">
             <svg width="36" height="36" fill="white" viewBox="0 0 24 24">
-              <path stroke="transparent" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18.25C15.5 18.25 19.25 16.5 19.25 12C19.25 7.5 15.5 5.75 12 5.75C8.5 5.75 4.75 7.5 4.75 12C4.75 13.0298 4.94639 13.9156 5.29123 14.6693C5.50618 15.1392 5.62675 15.6573 5.53154 16.1651L5.26934 17.5635C5.13974 18.2547 5.74527 18.8603 6.43651 18.7307L9.64388 18.1293C9.896 18.082 10.1545 18.0861 10.4078 18.1263C10.935 18.2099 11.4704 18.25 12 18.25Z"></path>
-              <path stroke="gray" stroke-linecap="round" stroke-linejoin="round" d="M9.5 12C9.5 12.2761 9.27614 12.5 9 12.5C8.72386 12.5 8.5 12.2761 8.5 12C8.5 11.7239 8.72386 11.5 9 11.5C9.27614 11.5 9.5 11.7239 9.5 12Z"></path>
-              <path stroke="gray" stroke-linecap="round" stroke-linejoin="round" d="M12.5 12C12.5 12.2761 12.2761 12.5 12 12.5C11.7239 12.5 11.5 12.2761 11.5 12C11.5 11.7239 11.7239 11.5 12 11.5C12.2761 11.5 12.5 11.7239 12.5 12Z"></path>
-              <path stroke="gray" stroke-linecap="round" stroke-linejoin="round" d="M15.5 12C15.5 12.2761 15.2761 12.5 15 12.5C14.7239 12.5 14.5 12.2761 14.5 12C14.5 11.7239 14.7239 11.5 15 11.5C15.2761 11.5 15.5 11.7239 15.5 12Z"></path>
+              <path fill-rule="evenodd" stroke="transparent" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403 10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z"
+                clip-rule="evenodd"></path>
             </svg>
-            <span>Messenger</span>
+            <span class="text-center">Buddylist</span>
           </div>
         </div>
-        <div class="flex space-x-3 w-full">
-          <div class="w-2/3 items-center rounded-lg flex-grow flex space-x-3">
-            <div class="w-1/2 flex flex-col px-3 py-2 bg-gray-800 rounded-lg justify-center items-center">
+        <div class="w-1/3 flex flex-col px-3 py-2 bg-gray-800 rounded-lg justify-center items-center">
+          <svg width="36" height="36" fill="white" viewBox="0 0 24 24">
+            <path stroke="transparent" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M6.75 6.75C6.75 5.64543 7.64543 4.75 8.75 4.75H15.25C16.3546 4.75 17.25 5.64543 17.25 6.75V19.25L12 14.75L6.75 19.25V6.75Z">
+            </path>
+          </svg>
+          <span class="text-center">Favorite Videos</span>
+        </div>
+      </div>
+      <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">Membership & Billing</span>
+      <div class="w-full bg-gray-800 rounded-lg divide-y divide-gray-700">
+        <div class="flex items-center justify-between px-6 py-5">
+          <div class="flex flex-col justify-start items-start space-y-1">
+            <span class="text-gray-400">Current plan</span>
+            <span class="px-1 bg-white rounded-md text-gray-900 text-sm">BASIC</span>
+          </div>
+          <span class="px-4 py-2 bg-red-600 rounded-lg cursor-pointer">Upgrade</span>
+        </div>
+        <div class="p-1 flex w-full divide-x divide-gray-700 px-6 py-5">
+          <div class="flex flex-col w-2/5 space-y-1">
+            <span class="text-gray-400">Valid thru</span>
+            <span>Unlimited</span>
+          </div>
+          <div class="flex w-3/5 items-center space-x-3 justify-between">
+            <div class="flex flex-col space-y-1 pl-3">
+              <span class="text-gray-400">Next Billing Date</span>
+              <span>-</span>
+            </div>
+            <div class="rounded-full bg-black">
               <svg width="36" height="36" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z"></path>
+                <path fill="currentColor"
+                  d="M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z">
+                </path>
+                <path fill="currentColor"
+                  d="M9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12Z">
+                </path>
+                <path fill="currentColor"
+                  d="M17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z">
+                </path>
               </svg>
-              <span class="text-center">Search Profiles</span>
-            </div>
-            <div class="w-1/2 flex flex-col px-3 py-2 bg-gray-800 rounded-lg justify-center items-center h-full">
-              <svg width="36" height="36" fill="white" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" stroke="transparent" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403 10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z" clip-rule="evenodd"></path>
-              </svg>
-              <span class="text-center">Buddylist</span>
             </div>
           </div>
-          <div class="w-1/3 flex flex-col px-3 py-2 bg-gray-800 rounded-lg justify-center items-center">
-            <svg width="36" height="36" fill="white" viewBox="0 0 24 24">
-              <path stroke="transparent" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 6.75C6.75 5.64543 7.64543 4.75 8.75 4.75H15.25C16.3546 4.75 17.25 5.64543 17.25 6.75V19.25L12 14.75L6.75 19.25V6.75Z"></path>
+        </div>
+      </div>
+      <div class="flex w-full space-x-3">
+        <div class="w-1/2 space-y-2 flex flex-col">
+          <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">My Buddies</span>
+          <div class="flex-1 flex flex-col p-4 bg-gray-800 rounded-lg justify-center items-center">
+            <svg width="60" height="60" fill="white" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M5.78168 19.25H13.2183C13.7828 19.25 14.227 18.7817 14.1145 18.2285C13.804 16.7012 12.7897 14 9.5 14C6.21031 14 5.19605 16.7012 4.88549 18.2285C4.773 18.7817 5.21718 19.25 5.78168 19.25Z">
+              </path>
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M15.75 14C17.8288 14 18.6802 16.1479 19.0239 17.696C19.2095 18.532 18.5333 19.25 17.6769 19.25H16.75">
+              </path>
+              <circle cx="9.5" cy="7.5" r="2.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.5"></circle>
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M14.75 10.25C16.2688 10.25 17.25 9.01878 17.25 7.5C17.25 5.98122 16.2688 4.75 14.75 4.75"></path>
             </svg>
-            <span class="text-center">Favorite Videos</span>
+            <span><b>My Buddies</b></span>
           </div>
         </div>
-        <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">Membership & Billing</span>
-        <div class="w-full bg-gray-800 rounded-lg divide-y divide-gray-700">
-          <div class="flex items-center justify-between px-6 py-5">
-            <div class="flex flex-col justify-start items-start space-y-1">
-              <span class="text-gray-400">Current plan</span>
-              <span class="px-1 bg-white rounded-md text-gray-900 text-sm">BASIC</span>
-            </div>
-            <span class="px-4 py-2 bg-red-600 rounded-lg cursor-pointer">Upgrade</span>
-          </div>
-          <div class="p-1 flex w-full divide-x divide-gray-700 px-6 py-5">
-            <div class="flex flex-col w-2/5 space-y-1">
-              <span class="text-gray-400">Valid thru</span>
-              <span>Unlimited</span>
-            </div>
-            <div class="flex w-3/5 items-center space-x-3 justify-between">
-              <div class="flex flex-col space-y-1 pl-3">
-                <span class="text-gray-400">Next Billing Date</span>
-                <span>-</span>
+        <div class="w-1/2 space-y-2 flex flex-col">
+          <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">Privacy Settings</span>
+          <div class="flex flex-col p-4 bg-gray-800 rounded-lg justify-around items-center">
+            <svg width="60" height="60" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M19.25 12C19.25 13 17.5 18.25 12 18.25C6.5 18.25 4.75 13 4.75 12C4.75 11 6.5 5.75 12 5.75C17.5 5.75 19.25 11 19.25 12Z">
+              </path>
+              <circle cx="12" cy="12" r="2.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.5"></circle>
+            </svg>
+            <span class="text-center"><b>Do not track me</b></span>
+            <span class="text-gray-400 text-sm text-center">Don't allow users to see if you've visited their profile and
+              keep the history their profile and keep the history of the profiles you visit.</span>
+            <label for="checkbox1" class="relative inline-flex items-center cursor-pointer mt-2">
+              <input type="checkbox" id="checkbox1" name="checkbox1" value="" class="sr-only peer">
+              <div
+                class="w-11 h-6 bg-gray-700 peer-focus:outline-none dark:peer-focus:ring-red-600 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-red-600">
               </div>
-              <div class="rounded-full bg-black">
-                <svg width="36" height="36" fill="none" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z"></path>
-                  <path fill="currentColor" d="M9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12Z"></path>
-                  <path fill="currentColor" d="M17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex w-full space-x-3">
-          <div class="w-1/2 space-y-2 flex flex-col">
-            <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">My Buddies</span>
-            <div class="flex-1 flex flex-col p-4 bg-gray-800 rounded-lg justify-center items-center">
-              <svg width="60" height="60" fill="white" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.78168 19.25H13.2183C13.7828 19.25 14.227 18.7817 14.1145 18.2285C13.804 16.7012 12.7897 14 9.5 14C6.21031 14 5.19605 16.7012 4.88549 18.2285C4.773 18.7817 5.21718 19.25 5.78168 19.25Z"></path>
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 14C17.8288 14 18.6802 16.1479 19.0239 17.696C19.2095 18.532 18.5333 19.25 17.6769 19.25H16.75"></path>
-                <circle cx="9.5" cy="7.5" r="2.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.75 10.25C16.2688 10.25 17.25 9.01878 17.25 7.5C17.25 5.98122 16.2688 4.75 14.75 4.75"></path>
-              </svg>
-              <span><b>My Buddies</b></span>              
-            </div>
-          </div>
-          <div class="w-1/2 space-y-2 flex flex-col">
-            <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">Privacy Settings</span>
-            <div class="flex flex-col p-4 bg-gray-800 rounded-lg justify-around items-center">
-              <svg width="60" height="60" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12C19.25 13 17.5 18.25 12 18.25C6.5 18.25 4.75 13 4.75 12C4.75 11 6.5 5.75 12 5.75C17.5 5.75 19.25 11 19.25 12Z"></path>
-                <circle cx="12" cy="12" r="2.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
-              </svg>
-              <span class="text-center"><b>Do not track me</b></span>
-              <span class="text-gray-400 text-sm text-center">Don't allow users to see if you've visited their profile and keep the history their profile and keep the history of the profiles you visit.</span>           
-              <label for="checkbox1" class="relative inline-flex items-center cursor-pointer mt-2">
-                <input type="checkbox" id="checkbox1" name="checkbox1" value="" class="sr-only peer">
-                <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none dark:peer-focus:ring-red-600 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-red-600"></div>
-              </label>
-            </div>
+            </label>
           </div>
         </div>
       </div>
-      <div class="w-full lg:w-3/12 space-y-4 lg:flex flex-col mb-16 lg:mb-0">
-        <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">Account Overview</span>
-        <div class="flex flex-col p-4 bg-gray-800 rounded-lg justify-around items-center w-full divide-gray-700 divide-y">
-          <div class="space-y-3 w-full mb-5">
-            <div class="flex w-full">
-              <span class="flex-1 text-gray-400">User Name:</span>
-              <span class="flex-1">Rich_Anw</span>
-            </div>
-            <div class="flex w-full">
-              <span class="flex-1 text-gray-400">My Location:</span>
-              <span class="flex-1">Great Meols, United...</span>
-            </div>
-            <div class="flex w-full">
-              <span class="flex-1 text-gray-400">Member ID:</span>
-              <span class="flex-1">863317</span>
-            </div>
-            <div class="flex w-full">
-              <span class="flex-1 text-gray-400">Contact Email:</span>
-              <span class="flex-1">rj*******04@gmail....</span>
-            </div>
+    </div>
+    <div class="w-full lg:w-3/12 space-y-4 lg:flex flex-col mb-16 lg:mb-0">
+      <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">Account Overview</span>
+      <div class="flex flex-col p-4 bg-gray-800 rounded-lg justify-around items-center w-full divide-gray-700 divide-y">
+        <div class="space-y-3 w-full mb-5">
+          <div class="flex w-full">
+            <span class="flex-1 text-gray-400">User Name:</span>
+            <span class="flex-1">Rich_Anw</span>
           </div>
-          <div class="space-y-3 w-full pt-5">
-            <div class="flex w-full">
-              <span class="flex-1 text-gray-400">Current plan:</span>
-              <span class="flex-1">Basic</span>
-            </div>
-            <div class="flex w-full">
-              <span class="flex-1 text-gray-400">Valid thru:</span>
-              <span class="flex-1">Unlimited</span>
-            </div>
-            <div class="flex w-full">
-              <span class="flex-1 text-gray-400">Profile Status:</span>
-              <span class="flex-1 text-green-400">Approved</span>
-            </div>
+          <div class="flex w-full">
+            <span class="flex-1 text-gray-400">My Location:</span>
+            <span class="flex-1">Great Meols, United...</span>
+          </div>
+          <div class="flex w-full">
+            <span class="flex-1 text-gray-400">Member ID:</span>
+            <span class="flex-1">863317</span>
+          </div>
+          <div class="flex w-full">
+            <span class="flex-1 text-gray-400">Contact Email:</span>
+            <span class="flex-1">rj*******04@gmail....</span>
           </div>
         </div>
-        <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">AD Area....</span>
-        <div class="text-lg border-l-2 border-red-600 pl-3 pb-1 flex justify-between">
-          <span>Ad Area</span>
-          <span class="border border-white rounded-lg text-sm px-1 pt-1">Ad</span>
+        <div class="space-y-3 w-full pt-5">
+          <div class="flex w-full">
+            <span class="flex-1 text-gray-400">Current plan:</span>
+            <span class="flex-1">Basic</span>
+          </div>
+          <div class="flex w-full">
+            <span class="flex-1 text-gray-400">Valid thru:</span>
+            <span class="flex-1">Unlimited</span>
+          </div>
+          <div class="flex w-full">
+            <span class="flex-1 text-gray-400">Profile Status:</span>
+            <span class="flex-1 text-green-400">Approved</span>
+          </div>
         </div>
       </div>
+      <span class="text-lg border-l-2 border-red-600 pl-3 pb-1">AD Area....</span>
+      <div class="text-lg border-l-2 border-red-600 pl-3 pb-1 flex justify-between">
+        <span>Ad Area</span>
+        <span class="border border-white rounded-lg text-sm px-1 pt-1">Ad</span>
+      </div>
     </div>
-    <div class="fixed w-full p-4 flex justify-around backdrop-blur bg-white bg-opacity-10 bottom-0 lg:hidden">
+  </div>
+  <div class="fixed w-full p-4 flex justify-around backdrop-blur bg-white bg-opacity-10 bottom-0 lg:hidden">
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+        d="M6.75024 19.2502H17.2502C18.3548 19.2502 19.2502 18.3548 19.2502 17.2502V9.75025L12.0002 4.75024L4.75024 9.75025V17.2502C4.75024 18.3548 5.64568 19.2502 6.75024 19.2502Z">
+      </path>
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+        d="M9.74963 15.7493C9.74963 14.6447 10.6451 13.7493 11.7496 13.7493H12.2496C13.3542 13.7493 14.2496 14.6447 14.2496 15.7493V19.2493H9.74963V15.7493Z">
+      </path>
+    </svg>
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+        d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z">
+      </path>
+    </svg>
+    <span class="relative inline-block">
       <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75024 19.2502H17.2502C18.3548 19.2502 19.2502 18.3548 19.2502 17.2502V9.75025L12.0002 4.75024L4.75024 9.75025V17.2502C4.75024 18.3548 5.64568 19.2502 6.75024 19.2502Z"></path>
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.74963 15.7493C9.74963 14.6447 10.6451 13.7493 11.7496 13.7493H12.2496C13.3542 13.7493 14.2496 14.6447 14.2496 15.7493V19.2493H9.74963V15.7493Z"></path>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+          d="M17.25 12V10C17.25 7.1005 14.8995 4.75 12 4.75C9.10051 4.75 6.75 7.10051 6.75 10V12L4.75 16.25H19.25L17.25 12Z">
+        </path>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+          d="M9 16.75C9 16.75 9 19.25 12 19.25C15 19.25 15 16.75 15 16.75"></path>
       </svg>
+      <span
+        class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">1</span>
+    </span>
+    <span class="relative inline-block">
       <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z"></path>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+          d="M12 18.25C15.5 18.25 19.25 16.5 19.25 12C19.25 7.5 15.5 5.75 12 5.75C8.5 5.75 4.75 7.5 4.75 12C4.75 13.0298 4.94639 13.9156 5.29123 14.6693C5.50618 15.1392 5.62675 15.6573 5.53154 16.1651L5.26934 17.5635C5.13974 18.2547 5.74527 18.8603 6.43651 18.7307L9.64388 18.1293C9.896 18.082 10.1545 18.0861 10.4078 18.1263C10.935 18.2099 11.4704 18.25 12 18.25Z">
+        </path>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+          d="M9.5 12C9.5 12.2761 9.27614 12.5 9 12.5C8.72386 12.5 8.5 12.2761 8.5 12C8.5 11.7239 8.72386 11.5 9 11.5C9.27614 11.5 9.5 11.7239 9.5 12Z">
+        </path>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+          d="M12.5 12C12.5 12.2761 12.2761 12.5 12 12.5C11.7239 12.5 11.5 12.2761 11.5 12C11.5 11.7239 11.7239 11.5 12 11.5C12.2761 11.5 12.5 11.7239 12.5 12Z">
+        </path>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+          d="M15.5 12C15.5 12.2761 15.2761 12.5 15 12.5C14.7239 12.5 14.5 12.2761 14.5 12C14.5 11.7239 14.7239 11.5 15 11.5C15.2761 11.5 15.5 11.7239 15.5 12Z">
+        </path>
       </svg>
-      <span class="relative inline-block">
-        <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 12V10C17.25 7.1005 14.8995 4.75 12 4.75C9.10051 4.75 6.75 7.10051 6.75 10V12L4.75 16.25H19.25L17.25 12Z"></path>
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 16.75C9 16.75 9 19.25 12 19.25C15 19.25 15 16.75 15 16.75"></path>
-        </svg>
-        <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">1</span>
-      </span>
-      <span class="relative inline-block">
-        <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18.25C15.5 18.25 19.25 16.5 19.25 12C19.25 7.5 15.5 5.75 12 5.75C8.5 5.75 4.75 7.5 4.75 12C4.75 13.0298 4.94639 13.9156 5.29123 14.6693C5.50618 15.1392 5.62675 15.6573 5.53154 16.1651L5.26934 17.5635C5.13974 18.2547 5.74527 18.8603 6.43651 18.7307L9.64388 18.1293C9.896 18.082 10.1545 18.0861 10.4078 18.1263C10.935 18.2099 11.4704 18.25 12 18.25Z"></path>
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M9.5 12C9.5 12.2761 9.27614 12.5 9 12.5C8.72386 12.5 8.5 12.2761 8.5 12C8.5 11.7239 8.72386 11.5 9 11.5C9.27614 11.5 9.5 11.7239 9.5 12Z"></path>
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12.5 12C12.5 12.2761 12.2761 12.5 12 12.5C11.7239 12.5 11.5 12.2761 11.5 12C11.5 11.7239 11.7239 11.5 12 11.5C12.2761 11.5 12.5 11.7239 12.5 12Z"></path>
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M15.5 12C15.5 12.2761 15.2761 12.5 15 12.5C14.7239 12.5 14.5 12.2761 14.5 12C14.5 11.7239 14.7239 11.5 15 11.5C15.2761 11.5 15.5 11.7239 15.5 12Z"></path>
-        </svg>
-        <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">1</span>
-      </span>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.5 6C12.5 6.27614 12.2761 6.5 12 6.5C11.7239 6.5 11.5 6.27614 11.5 6C11.5 5.72386 11.7239 5.5 12 5.5C12.2761 5.5 12.5 5.72386 12.5 6Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M12.5 12C12.5 12.2761 12.2761 12.5 12 12.5C11.7239 12.5 11.5 12.2761 11.5 12C11.5 11.7239 11.7239 11.5 12 11.5C12.2761 11.5 12.5 11.7239 12.5 12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M18.5 6C18.5 6.27614 18.2761 6.5 18 6.5C17.7239 6.5 17.5 6.27614 17.5 6C17.5 5.72386 17.7239 5.5 18 5.5C18.2761 5.5 18.5 5.72386 18.5 6Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M18.5 12C18.5 12.2761 18.2761 12.5 18 12.5C17.7239 12.5 17.5 12.2761 17.5 12C17.5 11.7239 17.7239 11.5 18 11.5C18.2761 11.5 18.5 11.7239 18.5 12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M6.5 6C6.5 6.27614 6.27614 6.5 6 6.5C5.72386 6.5 5.5 6.27614 5.5 6C5.5 5.72386 5.72386 5.5 6 5.5C6.27614 5.5 6.5 5.72386 6.5 6Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M6.5 12C6.5 12.2761 6.27614 12.5 6 12.5C5.72386 12.5 5.5 12.2761 5.5 12C5.5 11.7239 5.72386 11.5 6 11.5C6.27614 11.5 6.5 11.7239 6.5 12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M12.5 18C12.5 18.2761 12.2761 18.5 12 18.5C11.7239 18.5 11.5 18.2761 11.5 18C11.5 17.7239 11.7239 17.5 12 17.5C12.2761 17.5 12.5 17.7239 12.5 18Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M18.5 18C18.5 18.2761 18.2761 18.5 18 18.5C17.7239 18.5 17.5 18.2761 17.5 18C17.5 17.7239 17.7239 17.5 18 17.5C18.2761 17.5 18.5 17.7239 18.5 18Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M6.5 18C6.5 18.2761 6.27614 18.5 6 18.5C5.72386 18.5 5.5 18.2761 5.5 18C5.5 17.7239 5.72386 17.5 6 17.5C6.27614 17.5 6.5 17.7239 6.5 18Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-  </body>
+      <span
+        class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">1</span>
+    </span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12.5 6C12.5 6.27614 12.2761 6.5 12 6.5C11.7239 6.5 11.5 6.27614 11.5 6C11.5 5.72386 11.7239 5.5 12 5.5C12.2761 5.5 12.5 5.72386 12.5 6Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path
+        d="M12.5 12C12.5 12.2761 12.2761 12.5 12 12.5C11.7239 12.5 11.5 12.2761 11.5 12C11.5 11.7239 11.7239 11.5 12 11.5C12.2761 11.5 12.5 11.7239 12.5 12Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path
+        d="M18.5 6C18.5 6.27614 18.2761 6.5 18 6.5C17.7239 6.5 17.5 6.27614 17.5 6C17.5 5.72386 17.7239 5.5 18 5.5C18.2761 5.5 18.5 5.72386 18.5 6Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path
+        d="M18.5 12C18.5 12.2761 18.2761 12.5 18 12.5C17.7239 12.5 17.5 12.2761 17.5 12C17.5 11.7239 17.7239 11.5 18 11.5C18.2761 11.5 18.5 11.7239 18.5 12Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path
+        d="M6.5 6C6.5 6.27614 6.27614 6.5 6 6.5C5.72386 6.5 5.5 6.27614 5.5 6C5.5 5.72386 5.72386 5.5 6 5.5C6.27614 5.5 6.5 5.72386 6.5 6Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path
+        d="M6.5 12C6.5 12.2761 6.27614 12.5 6 12.5C5.72386 12.5 5.5 12.2761 5.5 12C5.5 11.7239 5.72386 11.5 6 11.5C6.27614 11.5 6.5 11.7239 6.5 12Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path
+        d="M12.5 18C12.5 18.2761 12.2761 18.5 12 18.5C11.7239 18.5 11.5 18.2761 11.5 18C11.5 17.7239 11.7239 17.5 12 17.5C12.2761 17.5 12.5 17.7239 12.5 18Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path
+        d="M18.5 18C18.5 18.2761 18.2761 18.5 18 18.5C17.7239 18.5 17.5 18.2761 17.5 18C17.5 17.7239 17.7239 17.5 18 17.5C18.2761 17.5 18.5 17.7239 18.5 18Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path
+        d="M6.5 18C6.5 18.2761 6.27614 18.5 6 18.5C5.72386 18.5 5.5 18.2761 5.5 18C5.5 17.7239 5.72386 17.5 6 17.5C6.27614 17.5 6.5 17.7239 6.5 18Z"
+        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+  <script src="
+https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-beta2/dist/js/tw-elements.umd.min.js
+"></script>
+</body>
+
 </html>
